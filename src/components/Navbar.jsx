@@ -65,12 +65,15 @@ const NavMenu = styled.ul`
     flex-direction: column;
     width: 100%;
     height: 90vh;
-    position: absolute;
+    position: fixed;
     top: 80px;
     right: ${({ click }) => (click ? 0 : "-100%")};
+    height: calc(100vh - 80px);
     opacity: 1;
     transition: all 0.5s ease;
     background-color: #101522;
+    max-width: 100vw;
+    z-index: 999;
   }
 `;
 
